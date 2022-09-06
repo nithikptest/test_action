@@ -1,1 +1,12 @@
-hello
+name: 'Container Action Template'
+description: 'Get started with Container actions'
+author: 'nithikptest'
+inputs: 
+  myInput:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.myInput }}
